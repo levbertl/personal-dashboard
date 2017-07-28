@@ -1,22 +1,18 @@
-#.travis.yml
-
 language: node_js
 node_js:
-  - "8.2.1"
-
+- 8.2.1
 branches:
   only:
-    - master
-
+  - master
 before_script:
-  - cd personal-dashboard
-  - npm install -g @angular/cli
-
+- cd personal-dashboard
+- npm install -g @angular/cli
 script:
-  - npm install
-  - ng build --prod
-
+- npm install
+- ng build --prod
 notifications:
   email:
     on_failure: change
     on_success: change
+  slack:
+    secure: XW6EiuCRy8oZsoc/AJ/oK8PBdbpoRooAIJPHuwuD1/9a+/EXUnhoM8BFpQ75X4U3GzoKoBPzsS99FMhuIcPqkPz5XKe1IK+5Gn9CRh5wdYpDGqz7OoovP1v1wePmfYsyZ3tCEyPcqx6elrVH14LHOwhc9Mw0lCmpiAMOt8acaxUg9Ribay3mcUypZJxHjyyFbu3pb91V2HrpeJlgwk6PhlU4MwBUUhlMpcuB0f7lul1n3tFjSrCWpi+pYwyJEFjj/PjRTyHKUUtsmd6JYkBsIfuU0XcXIZNfL58uQlKbWYDvXUQEqpc6ftX0GAyQxo7QFW61gkQ5j9+u+dRnD0lQau6KwUVdMFDwcXzpMfo2Nkhb1OlXs0pIi9I+K/z+sqrXwosMjU3SQrPJ90rnfhlpwphwxAGELnuyu/SuVrZa0E2jEH73fXYYDsbFc8pUvYREOHYfJZ0o1vSsug5GYaHipLT1QnMTrqi1HaLaAjEcmVjSd9legwjVrrhtPucaNPY1RPsykQvBuQe9TTr8Q/1K57n4unR9kp5XKqtYn6xZKhrms/qIem1XDZzw4+uBv1rruEJlfPs5uHnjNbdD0yBlSUGXdMHAM+47XofXOOJMtJIkwYizZzIXAgRrG1OVxzbK731U2bknCbSWtw9yLTLP6/bPd9CIducE8/8VTIc4phQ=
